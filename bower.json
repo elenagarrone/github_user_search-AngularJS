@@ -1,0 +1,26 @@
+{
+  "name": "github_user_search-AngularJS",
+  "version": "0.0.0",
+  "authors": [
+    "elena <elena.15@hotmail.it>"
+  ],
+  "description": "An app that allows to search for GitHub users using the GitHub API",
+  "keywords": [
+    "github",
+    "api"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3",
+    "bootstrap": "~3.3.2",
+    "angular": "~1.3.10",
+    "angular-resource": "~1.3.10"
+  }
+}
