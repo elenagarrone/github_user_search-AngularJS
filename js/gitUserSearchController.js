@@ -1,11 +1,8 @@
-githubUserSearch.controller('GitUserSearchController', function($scope){
+githubUserSearch.controller('GitUserSearchController', function($scope, $resource){
+  var searchResource = $resource('https://api.github.com/search/users');
   $scope.doSearch = function(){
-    $scope.searchResult = {
-      "items": [{
-        'login': 'elenagarrone',
-        'avatar_url': 'https://avatars0.githubusercontent.com/u/8397116?v=3',
-        'html_url': 'https://github.com/elenagarrone'
-      }]
-    }  
+    $scope.searchResult = searchResource.get({
+      q: $scope.searchTerm
+    })
   }
 })
