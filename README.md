@@ -23,5 +23,12 @@ Change into the directory:
 ```shell
 $ cd github_user_search-AngularJS
 ```
-
-[...]
+Suppose that you already have <em>npm</em> and <em>bower</em> on your machine, install the packages:
+```shell
+$ bower install
+$ npm install
+```
+Run:
+```shell
+$ open index.html
+```
