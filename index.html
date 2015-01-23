@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>GitHub user search</title>
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
@@ -12,17 +13,20 @@
   </head>
 
   <body ng-controller='GitUserSearchController'>
-    <form>
-      <input type='text' ng-model="searchTerm" ng-change='doSearch()' ng-model-options="{ updateOn: 'default blur', debounce: {'default': 500, 'blur': 0} }">
-      <button ng-click='doSearch()' >Search</button>
-    </form>
+    <section class='search'>
+      <form>
+        <label for='searchField'>Search a GitHub profile</label>
+        <input id='searchField' type='text' ng-model="searchTerm" ng-change='doSearch()' ng-model-options="{ updateOn: 'default blur', debounce: {'default': 500, 'blur': 0} }">
+      </form>
+    </section>
 
-    <ul ng-repeat='user in searchResult.items'>
-      <li>
-        <img ng-src="{{ user.avatar_url }}&s=50">
-        <a ng-href='{{ user.html_url }}'>{{ user.login }}</a>
-      </li>
-    </ul>
-
+    <section class='list'>
+      <ul>
+        <li ng-repeat='user in searchResult.items'>
+          <img ng-src="{{ user.avatar_url }}&s=50">
+          <a ng-href='{{ user.html_url }}'>{{ user.login }}</a>
+        </li>
+      </ul>
+    </section>
   </body>
 </html>
