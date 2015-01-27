@@ -34,3 +34,9 @@ Run:
 ```shell
 $ open index.html
 ```
+How to test:
+------------
+Run:
+```shell
+$ karma start test/karma.conf.js
+```
